@@ -13,3 +13,21 @@ const fibs = (number) => {
 };
 
 console.log(fibs(10));
+
+const fibsRecursive = (number) => {
+  if (number <= 0) {
+    return [];
+  } else if (number === 1) {
+    return [0];
+  } else if (number === 2) {
+    return [0, 1];
+  } else {
+    const sequence = fibsRecursive(number - 1);
+    sequence.push(
+      sequence[sequence.length - 1] + sequence[sequence.length - 2]
+    );
+    return sequence;
+  }
+};
+
+console.log(fibsRecursive(6));
