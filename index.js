@@ -1,13 +1,15 @@
 const fibs = (number) => {
-  for (
-    var fibArray = [0, 1], i = 0, j = 1, k = 0;
-    k < number;
-    i = j, j = x, k++
-  ) {
-    x = i + j;
-    fibArray.push(x);
+  let fibArray = [];
+  let a = 0;
+  let b = 1;
+
+  for (let i = 0; i < number; i++) {
+    fibArray.push(a);
+    const temp = a;
+    a = b;
+    b = temp + b;
   }
-  console.log(fibArray);
+  return fibArray;
 };
 
-fibs(10);
+console.log(fibs(10));
