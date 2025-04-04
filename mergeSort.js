@@ -21,6 +21,7 @@ const merge = (arrayLeft, arrayRight) => {
   let leftIndex = 0;
   let rightIndex = 0;
 
+  // look at what the minimum number to push it (comparing two of the arrays made recursively)
   while (leftIndex < arrayLeft.length && rightIndex < arrayRight.length) {
     if (arrayLeft[leftIndex] < arrayRight[rightIndex]) {
       mergedArray.push(arrayLeft[leftIndex]);
@@ -47,4 +48,4 @@ const merge = (arrayLeft, arrayRight) => {
 
 const array1 = [3, 2, 1, 13, 8, 5, 0, 1];
 const sortedArray1 = mergeSortRecursive(array1);
-console.log(sortedArray1); // Output: [0, 1, 1, 2, 3, 5, 8, 13]
+console.log(sortedArray1);
